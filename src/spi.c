@@ -173,11 +173,11 @@ void spi_end_transfer( void ) {
 }
 
 int __init spi_init( void ) {
-	gpio_set_pin_mode(  7, GPIO_PINMODE_ALT0 );
-	gpio_set_pin_mode(  8, GPIO_PINMODE_ALT0 );
-	gpio_set_pin_mode(  9, GPIO_PINMODE_ALT0 );
-	gpio_set_pin_mode( 10, GPIO_PINMODE_ALT0 );
-	gpio_set_pin_mode( 11, GPIO_PINMODE_ALT0 );
+	gpio_set_pin_mode(  7, GPIO_PIN_MODE_ALT0 );
+	gpio_set_pin_mode(  8, GPIO_PIN_MODE_ALT0 );
+	gpio_set_pin_mode(  9, GPIO_PIN_MODE_ALT0 );
+	gpio_set_pin_mode( 10, GPIO_PIN_MODE_ALT0 );
+	gpio_set_pin_mode( 11, GPIO_PIN_MODE_ALT0 );
 
 	spi_mem = ( u8* ) ioremap( BCM2836_IO_MEM_START + SPI_OFFSET, SPI_SIZE );
 	if ( !spi_mem ) {
@@ -196,11 +196,11 @@ void __exit spi_exit( void ) {
 		spi_mem = ( u8* ) 0;
 	}
 
-	gpio_set_pin_mode(  7, GPIO_PINMODE_INPUT );
-	gpio_set_pin_mode(  8, GPIO_PINMODE_INPUT );
-	gpio_set_pin_mode(  9, GPIO_PINMODE_INPUT );
-	gpio_set_pin_mode( 10, GPIO_PINMODE_INPUT );
-	gpio_set_pin_mode( 11, GPIO_PINMODE_INPUT );
+	gpio_set_pin_mode(  7, GPIO_PIN_MODE_INPUT );
+	gpio_set_pin_mode(  8, GPIO_PIN_MODE_INPUT );
+	gpio_set_pin_mode(  9, GPIO_PIN_MODE_INPUT );
+	gpio_set_pin_mode( 10, GPIO_PIN_MODE_INPUT );
+	gpio_set_pin_mode( 11, GPIO_PIN_MODE_INPUT );
 }
 
 EXPORT_SYMBOL( spi_hw_timeout );
