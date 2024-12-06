@@ -2,6 +2,7 @@
 #define _SPECTR_IO_SPI_H
 
 #include <linux/init.h>
+#include <linux/types.h>
 
 #define SPI_ERR_IO_MAP_FAIL	-1
 #define SPI_ERR_HW_TIMEOUT	-2
@@ -41,7 +42,7 @@ void __exit spi_exit( void );
  * @param div The divider.
  * 
  */
-void spi_set_clk_div( unsigned short div );
+void spi_set_clk_div( u16 div );
 
 /**
  * Sets the chip select line for SPI bus operations.
@@ -49,7 +50,7 @@ void spi_set_clk_div( unsigned short div );
  * @param cs The chip.
  * 
  */
-void spi_select_chip( unsigned int chip );
+void spi_select_chip( u8 chip );
 
 /**
  * Sets the clock phase and polrity of the SPI bus.
@@ -57,7 +58,7 @@ void spi_select_chip( unsigned int chip );
  * @param mode The mode defining the clock phase and polarity to use.
  * 
  */
-void spi_set_mode( unsigned int mode );
+void spi_set_mode( u8 mode );
 
 /**
  * Enables reading from the SPI bus.

@@ -1,5 +1,5 @@
 ifneq ($(KERNELRELEASE),)
-	EXTRA_CFLAGS := -I$(PWD)/src
+	EXTRA_CFLAGS := -I$(PWD)/src -I$(SPECTR_COMMON)/src
 	obj-m := spectr_io.o
 	spectr_io-y := src/gpio.o src/main.o src/spi.o
 

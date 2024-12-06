@@ -38,7 +38,7 @@ void __exit gpio_exit( void );
  * @param pinmode The mode.
  *
  */
-void gpio_set_pin_mode( unsigned int pin, unsigned int pinmode );
+void gpio_set_pin_mode( unsigned int pin, unsigned int mode );
 
 /**
  * Sets the output of a GPIO bus pin to low.

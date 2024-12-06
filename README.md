@@ -1,6 +1,6 @@
 Overview
 ====
-The SPECTR IO project is a sub-project of SPECTR. It provide a wrapper for low level IO communication.
+The SPECTR IO project is a sub-project of SPECTR. It provide a wrapper for low level IO communication. This project requires the SPECTR Common project.
 
 Requirements
 ====
@@ -9,6 +9,8 @@ The current version of SPECTR and its sub-projects run on a Broadcom BCM2836 bas
 Building
 ====
 To build the project you can use the provided Makefile so long as you are building on the target system and have the kernel source tree under `/lib/modules/$(uname -r)/build`. If you have the source tree elsewhere just modify the KERNELDIR variable in the Makefile to reflect this. If you're cross compiling then I'm not explaining how to set it up.
+
+You must provide an additional variable at the command line, `SPECTR_COMMON`, which points to the directory (without trailing slash) that the SPECTR Common project root is located.
 
 Running
 ====
