@@ -1,5 +1,5 @@
-#ifndef _SPECTRE_IO_SPI_H
-#define _SPECTRE_IO_SPI_H
+#ifndef _SPECTR_IO_SPI_H
+#define _SPECTR_IO_SPI_H
 
 #include <linux/init.h>
 
@@ -123,5 +123,5 @@ int spi_await_transfer( void );
  */
 void spi_end_transfer( void );
 
-#endif // _SPECTRE_IO_SPI_H
+#endif // _SPECTR_IO_SPI_H
 

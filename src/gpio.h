@@ -1,5 +1,5 @@
-#ifndef _SPECTRE_IO_GPIO_H
-#define _SPECTRE_IO_GPIO_H
+#ifndef _SPECTR_IO_GPIO_H
+#define _SPECTR_IO_GPIO_H
 
 #include <linux/init.h>
 
@@ -66,5 +66,5 @@ void gpio_set_pin_high( unsigned int pin );
  */
 unsigned int gpio_get_pin_level( unsigned int pin );
 
-#endif // _SPECTRE_IO_GPIO_H
+#endif // _SPECTR_IO_GPIO_H
 

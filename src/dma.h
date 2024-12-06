@@ -1,5 +1,5 @@
-#ifndef _SPECTRE_IO_DMA_H
-#define _SPECTRE_IO_DMA_H
+#ifndef _SPECTR_IO_DMA_H
+#define _SPECTR_IO_DMA_H
 
 #include <asm/io.h>
 
@@ -191,5 +191,5 @@ static inline void dma_set_flags32( void __iomem* addr, u32 flags ) {
 	iowrite32( ioread32( addr ) | flags, addr );
 }
 
-#endif // _SPECTRE_IO_DMA_H
+#endif // _SPECTR_IO_DMA_H
 
