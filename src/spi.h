@@ -7,17 +7,17 @@
 #define SPI_ERR_IO_MAP_FAIL	-1
 #define SPI_ERR_HW_TIMEOUT	-2
 
-#define SPI_CHIP0	0
-#define SPI_CHIP1	SPI_CS_CSL
+#define SPI_CHIP0	0x00
+#define SPI_CHIP1	0x01
 
 // CLK rest low, CLK transition at middle of data bit
-#define SPI_MODE0	0
+#define SPI_MODE0	0x00
 // CLK rest low, CLK transition at beginning of data bit
-#define SPI_MODE1	SPI_CS_CPHA
+#define SPI_MODE1	0x01
 // CLK rest high, CLK transition at middle of data bit
-#define SPI_MODE2	SPI_CS_CPOL
+#define SPI_MODE2	0x10
 // CLK rest high, CLK transition at beginning of data bit
-#define SPI_MODE3	( SPI_CS_CPHA | SPI_CS_CPOL )
+#define SPI_MODE3	0x11
 
 // The timeout for the SPI hardware in milliseconds.
 extern unsigned int spi_hw_timeout;
