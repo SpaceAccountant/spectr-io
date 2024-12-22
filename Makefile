@@ -1,7 +1,7 @@
 ifneq ($(KERNELRELEASE),)
 	EXTRA_CFLAGS := -I$(PWD)/src -I$(SPECTR_COMMON)/src
 	obj-m := spectr_io.o
-	spectr_io-y := src/gpio.o src/main.o src/spi.o
+	spectr_io-y := src/gpio.o src/i2c.o src/main.o src/spi.o
 
 else
 	KERNELDIR ?= /lib/modules/$(shell uname -r)/build
